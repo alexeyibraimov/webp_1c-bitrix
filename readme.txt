@@ -16,7 +16,7 @@ server {...}
       location ~* ^.+\.(jpg|jpeg|gif|png|svg|js|css|mp3|ogg|mpeg|avi|zip|gz|bz2|rar|swf|ico)$ {...}
 
 
-В файл .htaccess в корне сайта, ан сличай если запрос все же добрался и до апача, прописать редирект на скрипт:
+В файл .htaccess (в корне сайта), на случай, если запрос все же добрался и до апача, нужно прописать редирект на скрипт-генератор:
 
   RewriteCond %{REQUEST_URI} !(.*)/$
   RewriteCond %{REQUEST_FILENAME} !-f
